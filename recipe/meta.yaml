@@ -1,5 +1,5 @@
 {% set name = "pyopenrivercam" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/localdevices/pyorc/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: e9b2b329942123fb1a1e4b198a5349fc009d7357b4eac9cdb22e81deb3b74282
+  sha256: 49dfe863d593f3192bce3eea86dea575e33f27b2cbbc1edfbeb0501996b3bba2
 
 build:
   noarch: python
@@ -55,7 +55,7 @@ test:
 
 about:
   home: https://github.com/localdevices/pyorc
-  summary: 'Measure river and stream surface velocity and river flow from UAV, smartphone or IP camera videos'
+  summary: Measure river and stream surface velocity and river flow from UAV, smartphone or IP camera videos
   description: |
     pyOpenRiverCam is an open-source API for estimating surface velocity and river flow from IP, drone or smartphone camera
     videos. It performs preprocessing, surface velocity estimation, spurious velocity filtering, cross section sampling, 
