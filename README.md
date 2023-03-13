@@ -1,11 +1,11 @@
-About pyopenrivercam
-====================
+About pyopenrivercam-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyopenrivercam-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/localdevices/pyorc
 
 Package license: AGPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyopenrivercam-feedstock/blob/main/LICENSE.txt)
 
 Summary: Measure river and stream surface velocity and river flow from UAV, smartphone or IP camera videos
 
