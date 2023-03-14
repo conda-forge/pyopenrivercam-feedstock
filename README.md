@@ -13,11 +13,11 @@ Development: https://github.com/localdevices/pyorc
 
 Documentation: https://localdevices.github.io/pyorc
 
-pyOpenRiverCam is an open-source API for estimating surface velocity and river flow from IP, drone or smartphone camera
-videos. It performs preprocessing, surface velocity estimation, spurious velocity filtering, cross section sampling,
-infilling of missings, and integration to discharge. A user only needs to perform light field work and collect
-videos. It is pure python code and therefore easy to take up in your own software project or perform research with or
-develop new features.
+pyOpenRiverCam is an open-source Command-Line Interface and API for estimating surface velocity and river flow from IP,
+drone or smartphone camera videos. It performs preprocessing, surface velocity estimation, spurious velocity filtering, 
+cross section sampling, infilling of missings, and integration to discharge. A user only needs to perform light field 
+work and collect videos. It is pure python code and therefore easy to take up in your own software project or perform 
+research with or develop new features.
 
 
 Current build status
