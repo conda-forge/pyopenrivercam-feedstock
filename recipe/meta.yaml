@@ -10,9 +10,11 @@ source:
   sha256: a571a8f4c280bb30051dc9670ba5536cf8ba6f961ad1f8b201e5ea8581aef5a5
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
   number: 0
+  noarch: python
+  entry_points:
+    - pyorc = pyorc.cli.main:cli
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
 
@@ -51,10 +53,12 @@ requirements:
 test:
   imports:
     - pyorc
+    - pyorc.cli
   requires:
     - pip
   commands:
     - pip check
+    - pyorc --help
 
 about:
   home: https://github.com/localdevices/pyorc
