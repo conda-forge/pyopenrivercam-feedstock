@@ -1,1 +1,9 @@
 mesa-libGL
+mesa-libEGL
+mesa-libGL-devel
+mesa-libEGL-devel
+mesa-dri-drivers
+mesa-libGLU-devel
+libglvnd-egl
+libglvnd-glx
+libglvnd-opengl
