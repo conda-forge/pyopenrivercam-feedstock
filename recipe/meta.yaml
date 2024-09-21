@@ -19,12 +19,12 @@ build:
 requirements:
 
   host:
-    - python=3.11
+    - python =3.11
     - flit
     - pip
 
   run:
-    - python=3.11
+    - python =3.11
     - cartopy
     - click
     - dask
