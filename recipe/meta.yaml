@@ -1,5 +1,5 @@
 {% set name = "pyopenrivercam" %}
-{% set version = "0.6.1" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/localdevices/pyorc/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: fd9789839fb6a952993e910ec8cd898793c7fd426586113c544c71c962a95b83
+  sha256: 5887c4fdbd013c772f00e5b7236b9486a19bd5dcf0b3ab8c3d9623f870cdbf68
 
 build:
   number: 0
@@ -17,19 +17,18 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-
   host:
     - python =3.11
     - flit
     - pip
-
   run:
-    - python =3.11
+    - python >=3.11
     - cartopy
     - click
     - dask
     - descartes # platform does not support 1.1.0 for some reason, but descartes works! therefore for now pip check is excluded
     - flox
+    - ffpiv
     - geojson
     - geopandas
     - geos
@@ -37,7 +36,7 @@ requirements:
     - matplotlib-base
     - netCDF4
     - numba
-    - numpy >=1.20, <2  # numba only works < 2.0
+    - numpy >=1.23, <2  # numba only works < 2.0
     - opencv
     - openpiv
     - pip
@@ -53,7 +52,6 @@ requirements:
     - watermark
     - xarray
     - yaml
-
 test:
   imports:
     - pyorc
@@ -61,9 +59,8 @@ test:
   requires:
     - pip
   commands:
-#    - pip check  # bring back pip check once descartes moves to >1.1.0
+    # - pip check  # bring back pip check once descartes moves to >1.1.0
     - pyorc --help
-
 about:
   home: https://github.com/localdevices/pyorc
   summary: Measure river and stream surface velocity and river flow from UAV, smartphone or IP camera videos
