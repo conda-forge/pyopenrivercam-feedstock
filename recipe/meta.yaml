@@ -17,19 +17,18 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-
   host:
-    - python =3.11
+    - python {{ python_min }}
     - flit
     - pip
-
   run:
-    - python =3.11
+    - python >={{ python_min }}
     - cartopy
     - click
     - dask
     - descartes # platform does not support 1.1.0 for some reason, but descartes works! therefore for now pip check is excluded
     - flox
+    - ffpiv
     - geojson
     - geopandas
     - geos
@@ -53,7 +52,6 @@ requirements:
     - watermark
     - xarray
     - yaml
-
 test:
   imports:
     - pyorc
@@ -61,9 +59,8 @@ test:
   requires:
     - pip
   commands:
-#    - pip check  # bring back pip check once descartes moves to >1.1.0
+    # - pip check  # bring back pip check once descartes moves to >1.1.0
     - pyorc --help
-
 about:
   home: https://github.com/localdevices/pyorc
   summary: Measure river and stream surface velocity and river flow from UAV, smartphone or IP camera videos
