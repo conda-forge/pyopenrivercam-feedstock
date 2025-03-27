@@ -1,3 +1,4 @@
+{% set python_min = '3.11' %}
 {% set name = "pyopenrivercam" %}
 {% set version = "0.8.5" %}
 
@@ -10,7 +11,7 @@ source:
   sha256: 9f17c89f5f553894171c9e7df3369e18f5880de35863df765e55460f8d178b63
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - pyorc = pyorc.cli.main:cli
@@ -18,11 +19,11 @@ build:
 
 requirements:
   host:
-    - python =3.11
+    - python {{ python_min }}
     - flit
     - pip
   run:
-    - python >=3.11
+    - python >={{ python_min }}
     - cartopy
     - click
     - dask
@@ -58,6 +59,7 @@ test:
     - pyorc.cli
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     # - pip check  # bring back pip check once descartes moves to >1.1.0
     - pyorc --help
