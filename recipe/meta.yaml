@@ -1,5 +1,5 @@
 {% set name = "pyopenrivercam" %}
-{% set version = "0.8.10" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/localdevices/pyorc/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d9914e0dc47a8169758991beae374e6cedb530b65e190f150ed78660269d0943
+  sha256: fdc68270193cedc15bdf2bcd280f0fdd85a672abf2ddd24e3bffb409c0c2af3a
 
 build:
   number: 0
